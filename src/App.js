@@ -1,9 +1,9 @@
-import MyScene from "./MyScene";
+import Game from "./Game";
 
 function App() {
   return (
     <div className="App">
-      <MyScene />
+      <Game />
     </div>
   );
 }

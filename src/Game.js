@@ -4,7 +4,7 @@ import GameScene from "./GameScene";
 const width = 1920;
 const height = 1200;
 
-const MyScene = () => {
+const Game = () => {
   const gameRef = useRef(null);
 
   useEffect(() => {
@@ -12,11 +12,13 @@ const MyScene = () => {
       type: Phaser.AUTO,
       width: width,
       height: height,
-      rows: 3,
-      cols: 8,
       parent: "game",
       scene: new GameScene(),
     };
+    config.scene.my_cards = [1, 2, 3, 4, 5];
+    config.scene.rows = 2;
+    config.scene.cols = 5;
+
     const game = new Phaser.Game(config);
 
     gameRef.current = game;
@@ -29,4 +31,4 @@ const MyScene = () => {
   return <div id="game" />;
 };
 
-export default MyScene;
+export default Game;
