@@ -25,13 +25,13 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      - name: build app
+      - name: build appg
         run: npm run build
 
       - name: upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist
+          path: ./build
       - name: deploy to github pages
         id: deployment
         uses: actions/deploy-pages@v1
